@@ -27,9 +27,51 @@ int test
 =======
 will be done :
 
+exceptions
 REST API
 simulate DB
-exceptions
+
+
+
+
+як закинути на git:
+0. git clone повна_урла_до_репозиторію
+1. git init
+2. додаєте .gitignore файл
+3. git status - покаже статус файлів проекту
+4. git add .
+5. git commit -m "назва коміту"
+3. VCS -> Import into Version Control -> Share project on Github
+
+--master бренча--
+
+git checkout -b назва_нової_бренчі
+git add .
+git commit -m "назва коміту"
+git push origin назва_нової_бренчі
+
+
+git log - показує останні коміти (вихід q)
+git pull - завантажує всі зміни з бренчі на якій ви знаходитеся
+git reset . - зворотня команда до git add
+
+git merge назва_бренчі - змерджить "назва_бренчі" у вашу теперішню бренчу
+
+
+master -> git checkout -b назва_першої_бренчі -> мерджите через ПР в мастер  ->
+-> переходите в мастер -> git pull -> git checkout -b назва_другої_бренчі  ->
+-> мерджите через ПР в мастер
+
+
+resource/controller - повинен бути простим
+service - містить бізнес-логіку
+repository - містить дані
+
+entity - працює ЛИШЕ з репозиторієм, серсісом та маппером
+mapper - робить конвертацію між entity та dto
+dto/model - працює ЛИШЕ з контроллер/ресурс, серсісом та маппером
+
+exception - містить вийняткові ситуації та обробник
 
 
 
