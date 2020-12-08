@@ -27,9 +27,27 @@ int test
 =======
 will be done :
 
+exceptions
 REST API
 simulate DB
-exceptions
+
+
+
+
+як закинути на git:
+1. git init
+2. додаєте .gitignore файл
+3. git status - покаже статус файлів проекту
+4. git add .
+5. git commit -m "назва коміту"
+3. VCS -> Import into Version Control -> Share project on Github
+
+--master бренча--
+
+git checkout -b назва_нової_бренчі
+
+
+BS-58
 
 
 

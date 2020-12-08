@@ -14,6 +14,9 @@ public class HelloController {
 
     @GetMapping("/dummy")
     public UserDTO dummy() {
+        if(true){
+            throw new RuntimeException("some text");
+        }
         return userService.getDummyUser();
     }
 
