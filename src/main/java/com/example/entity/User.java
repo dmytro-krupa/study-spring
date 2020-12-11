@@ -1,10 +1,10 @@
 package com.example.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class User {
+    private Long id;
     private String firstname;
     private String lastname;
     private LocalDate birth;
@@ -16,7 +16,8 @@ public class User {
     public User() {
     }
 
-    public User(final String firstname, final String lastname, final LocalDate birth, final List<Order> orders) {
+    public User(final Long id, final String firstname, final String lastname, final LocalDate birth, final List<Order> orders) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.birth = birth;
