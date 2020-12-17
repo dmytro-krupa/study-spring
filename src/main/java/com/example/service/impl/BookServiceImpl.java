@@ -1,22 +1,33 @@
 package com.example.service.impl;
 
 import com.example.dto.BookDTO;
+import com.example.mapper.BookToBookDTOMapper;
+import com.example.repository.BookRepository;
 import com.example.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
 public class BookServiceImpl implements BookService {
+
+    @Autowired
+    private BookRepository bookRepository;
+
+    @Autowired
+    private BookToBookDTOMapper bookToBookDTOMapper;
+
     @Override
     public BookDTO getBookById(final Long id) {
 
-        return null;
+        return bookToBookDTOMapper.toDTO(bookRepository.getDummyBook());
     }
 
     @Override
     public List<BookDTO> getAllBooks() {
-        return null;
+        return Collections.singletonList(bookToBookDTOMapper.toDTO(bookRepository.getDummyBook()));
     }
 
     @Override
