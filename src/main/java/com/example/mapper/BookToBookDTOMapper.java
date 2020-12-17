@@ -9,6 +9,7 @@ public class BookToBookDTOMapper {
     public Book toEntity(final BookDTO bookDTO){
         final Book book = new Book();
 
+        book.setId(book.getId());
         book.setAuthorName(bookDTO.getAuthorName());
         book.setPrice(bookDTO.getPrice());
         book.setTitle(bookDTO.getTitle());
@@ -19,6 +20,7 @@ public class BookToBookDTOMapper {
     public BookDTO toDTO(final Book book){
         final BookDTO bookDTO = new BookDTO();
 
+        bookDTO.setId(book.getId());
         bookDTO.setAuthorName(book.getAuthorName());
         bookDTO.setPrice(book.getPrice());
         bookDTO.setTitle(book.getTitle());

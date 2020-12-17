@@ -1,6 +1,7 @@
 package com.example.dto;
 
 public class BookDTO {
+    private Long id;
     private String title;
     private double price;
     private String authorName;
@@ -8,7 +9,8 @@ public class BookDTO {
     public BookDTO() {
     }
 
-    public BookDTO(final String title, final double price, final String authorName) {
+    public BookDTO(final Long id, final String title, final double price, final String authorName) {
+        this.id = id;
         this.title = title;
         this.price = price;
         this.authorName = authorName;
@@ -36,5 +38,13 @@ public class BookDTO {
 
     public void setAuthorName(final String authorName) {
         this.authorName = authorName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
     }
 }

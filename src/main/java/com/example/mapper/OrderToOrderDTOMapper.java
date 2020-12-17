@@ -17,6 +17,7 @@ public class OrderToOrderDTOMapper {
 
         final Order order = new Order();
 
+        order.setId(orderDTO.getId());
         order.setOrderDate(orderDTO.getOrderDate());
         order.setOrderDetails(order.getOrderDetails());
         order.setUser(user);
@@ -27,6 +28,7 @@ public class OrderToOrderDTOMapper {
     public OrderDTO toDTO(final Order order){
         final OrderDTO orderDTO = new OrderDTO();
 
+        orderDTO.setId(order.getId());
         orderDTO.setOrderDate(order.getOrderDate());
         orderDTO.setOrderDetails(order.getOrderDetails());
         orderDTO.setUserFirstname(order.getUser().getFirstname());

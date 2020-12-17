@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class Order {
+    private Long id;
     private LocalDate orderDate;
     private User user;
     private Map<Book, Integer> orderDetails;
@@ -11,7 +12,8 @@ public class Order {
     public Order() {
     }
 
-    public Order(final LocalDate orderDate, final User user, final Map<Book, Integer> orderDetails) {
+    public Order(final Long id, final LocalDate orderDate, final User user, final Map<Book, Integer> orderDetails) {
+        this.id = id;
         this.orderDate = orderDate;
         this.user = user;
         this.orderDetails = orderDetails;
@@ -39,5 +41,13 @@ public class Order {
 
     public void setOrderDetails(final Map<Book, Integer> orderDetails) {
         this.orderDetails = orderDetails;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
     }
 }

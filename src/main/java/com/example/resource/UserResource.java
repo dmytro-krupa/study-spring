@@ -18,7 +18,7 @@ public class UserResource {
     }
 
     @GetMapping("/user")
-    public List<UserDTO> getUserById(){
+    public List<UserDTO> getAllUsers(){
         return userService.getAllUsers();
     }
 

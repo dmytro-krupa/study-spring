@@ -55,4 +55,12 @@ public class User {
     public void setOrders(final List<Order> orders) {
         this.orders = orders;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
+    }
 }

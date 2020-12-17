@@ -1,6 +1,7 @@
 package com.example.entity;
 
 public class Book {
+    private Long id;
     private String title;
     private double price;
     private String authorName;
@@ -8,7 +9,8 @@ public class Book {
     public Book() {
     }
 
-    public Book(final String title, final double price, final String authorName) {
+    public Book(final Long id, final String title, final double price, final String authorName) {
+        this.id = id;
         this.title = title;
         this.price = price;
         this.authorName = authorName;
@@ -36,5 +38,13 @@ public class Book {
 
     public void setAuthorName(final String authorName) {
         this.authorName = authorName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
     }
 }

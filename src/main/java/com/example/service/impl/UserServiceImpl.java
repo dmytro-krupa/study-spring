@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO createUser(final UserDTO userDTO) {
-        return null;
+        return userDTO;
     }
 
     @Override
