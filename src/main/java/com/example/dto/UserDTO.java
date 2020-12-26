@@ -1,9 +1,11 @@
 package com.example.dto;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public class UserDTO {
     private Long id;
+    @NotNull
     private String firstname;
     private String lastname;
     private LocalDate birth;

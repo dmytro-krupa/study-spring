@@ -2,25 +2,31 @@ package com.example.dto;
 
 import com.example.entity.Book;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.Map;
 
 public class OrderDTO {
     private Long id;
+    @NotNull
     private LocalDate orderDate;
-    private String userFirstname;
-    private String userLastname;
-    private Map<Book, Integer> orderDetails;
+    @NotNull
+    private Long userId;
+
+    @NotNull
+    @NotBlank
+    @Size(min = 5, max = 8)
+    private String some;
 
     public OrderDTO() {
     }
 
-    public OrderDTO(final Long id, final LocalDate orderDate, final String userFirstname, final String userLastname, final Map<Book, Integer> orderDetails) {
+    public OrderDTO(final Long id, @NotNull final LocalDate orderDate, final Long userId) {
         this.id = id;
         this.orderDate = orderDate;
-        this.userFirstname = userFirstname;
-        this.userLastname = userLastname;
-        this.orderDetails = orderDetails;
+        this.userId = userId;
     }
 
     public LocalDate getOrderDate() {
@@ -31,28 +37,12 @@ public class OrderDTO {
         this.orderDate = orderDate;
     }
 
-    public String getUserFirstname() {
-        return userFirstname;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUserFirstname(final String userFirstname) {
-        this.userFirstname = userFirstname;
-    }
-
-    public String getUserLastname() {
-        return userLastname;
-    }
-
-    public void setUserLastname(final String userLastname) {
-        this.userLastname = userLastname;
-    }
-
-    public Map<Book, Integer> getOrderDetails() {
-        return orderDetails;
-    }
-
-    public void setOrderDetails(final Map<Book, Integer> orderDetails) {
-        this.orderDetails = orderDetails;
+    public void setUserId(final Long userId) {
+        this.userId = userId;
     }
 
     public Long getId() {
@@ -61,5 +51,13 @@ public class OrderDTO {
 
     public void setId(final Long id) {
         this.id = id;
+    }
+
+    public String getSome() {
+        return some;
+    }
+
+    public void setSome(final String some) {
+        this.some = some;
     }
 }

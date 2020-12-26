@@ -1,17 +1,20 @@
 package com.example.entity;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
     private Long id;
+    @NotNull
     private String firstname;
     private String lastname;
     private LocalDate birth;
 
     //todo add username and password
 
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
 
     public User() {
     }

@@ -9,7 +9,7 @@ public class BookToBookDTOMapper {
     public Book toEntity(final BookDTO bookDTO){
         final Book book = new Book();
 
-        book.setId(book.getId());
+        book.setId(bookDTO.getId());
         book.setAuthorName(bookDTO.getAuthorName());
         book.setPrice(bookDTO.getPrice());
         book.setTitle(bookDTO.getTitle());

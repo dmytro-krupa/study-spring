@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     public UserDTO updateUser(final UserDTO userDTO) {
 
         if(userDTO.getId() == null){
-            throw new ServiceException(400, "User shouldn't have an id ", null);
+            throw new ServiceException(400, "User have an id ", null);
         }
 
         return userMapper.toDto(userRepository.updateUser(userMapper.toEntity(userDTO, null)));

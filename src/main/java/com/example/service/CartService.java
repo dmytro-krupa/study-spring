@@ -6,5 +6,6 @@ public interface CartService {
 
     OrderDTO getCartByUserId(Long userId);
     OrderDTO addBookToCart(Long userId, Long bookId);
+    OrderDTO removeBookFromCart(Long userId, Long bookId);
 
 }

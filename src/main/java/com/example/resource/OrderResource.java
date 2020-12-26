@@ -5,6 +5,7 @@ import com.example.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,7 @@ public class OrderResource {
     }
 
     @PostMapping("/orders")
-    public OrderDTO createOrder(final @RequestBody OrderDTO orderDTO){
+    public OrderDTO createOrder(final @Valid @RequestBody OrderDTO orderDTO){
         return orderService.createOrder(orderDTO);
     }
 

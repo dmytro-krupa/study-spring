@@ -30,9 +30,11 @@ public class OrderToOrderDTOMapper {
 
         orderDTO.setId(order.getId());
         orderDTO.setOrderDate(order.getOrderDate());
-        orderDTO.setOrderDetails(order.getOrderDetails());
-        orderDTO.setUserFirstname(order.getUser().getFirstname());
-        orderDTO.setUserLastname(order.getUser().getLastname());
+//        orderDTO.setOrderDetails(order.getOrderDetails());
+        if(order.getUser() != null){
+//            orderDTO.setUserFirstname(order.getUser().getFirstname());
+//            orderDTO.setUserLastname(order.getUser().getLastname());
+        }
 
         return orderDTO;
     }
